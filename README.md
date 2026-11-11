@@ -1,4 +1,4 @@
-# 📖 Hát-Hét Dislexia — Evaluarea Națională
+# 📖 Hat-Hét Dislexia — Evaluarea Națională
 
 > **Aplicație adaptată pentru elevii cu dislexie dedicată pregătirii pentru Evaluarea Națională (clasa a VIII-a), pornind cu materia de Limba și Literatura Română.**
 

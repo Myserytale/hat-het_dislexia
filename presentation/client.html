@@ -1,0 +1,860 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hát-Hét Dislexia — Prezentare pentru Client (3 direcții pe hârtie)</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body data-storage-key="hat_het_client_v1">
+  <!-- Shared SVG Filters & Markers (never apply pencil-wobble to <text>) -->
+  <svg width="0" height="0" style="position:absolute; pointer-events:none;" aria-hidden="true" viewBox="0 0 1 1">
+    <defs>
+      <filter id="pencil-wobble" x="-5%" y="-5%" width="110%" height="110%">
+        <feTurbulence type="fractalNoise" baseFrequency="0.035" numOctaves="2" seed="7" result="noise" />
+        <feDisplacementMap in="SourceGraphic" in2="noise" scale="1.5" xChannelSelector="R" yChannelSelector="G" />
+      </filter>
+      <marker id="arrow-ink" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+        <path d="M 1 1.5 L 8.5 5 L 1 8.5 z" fill="#4A5568" />
+      </marker>
+      <marker id="arrow-alt1" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+        <path d="M 1 1.5 L 8.5 5 L 1 8.5 z" fill="#2B6CB0" />
+      </marker>
+      <marker id="arrow-alt2" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+        <path d="M 1 1.5 L 8.5 5 L 1 8.5 z" fill="#C05621" />
+      </marker>
+      <marker id="arrow-alt3" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+        <path d="M 1 1.5 L 8.5 5 L 1 8.5 z" fill="#2F855A" />
+      </marker>
+    </defs>
+  </svg>
+
+  <div class="deck-app">
+    <main class="stage-viewport">
+      <div class="stage-wrapper">
+
+        <!-- ==================== SLIDE 1 ==================== -->
+        <section class="slide active" data-slide="1" data-title="Copertă — 3 direcții pentru client" data-duration="30">
+          <div class="slide-body">
+            <div class="cover-layout">
+              <div>
+                <span class="eyebrow">Întâlnire cu clientul • 3 idei pe hârtie</span>
+                <h1 class="cover-title">Hát-Hét Dislexia<br /><span style="color:#2B6CB0; font-size:32px; font-weight:700;">3 direcții diferite pentru pregătirea la Română</span></h1>
+                <p class="cover-lead">
+                  Vrem să vă arătăm trei feluri diferite în care ar putea funcționa aplicația pentru Evaluarea Națională și să aflăm ce ar ajuta cu adevărat un elev cu dislexie.
+                </p>
+
+                <div class="cover-meta-grid">
+                  <div class="meta-row">
+                    <span class="meta-label">Pregătit pentru:</span>
+                    <span data-editable="client-name"><span class="edit-badge">EDITABIL</span> [Numele / organizația clientului]</span>
+                  </div>
+                  <div class="meta-row">
+                    <span class="meta-label">Echipa:</span>
+                    <span data-editable="client-team"><span class="edit-badge">EDITABIL</span> Hat-Hét</span>
+                  </div>
+                  <div class="meta-row">
+                    <span class="meta-label">Data:</span>
+                    <span data-editable="client-date"><span class="edit-badge">EDITABIL</span> 26 Noiembrie 2026</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="sketch-sheet" style="height: 520px; flex-direction: column; justify-content: center;">
+                <svg viewBox="0 0 420 440" style="width:100%; height:100%;" role="img" aria-label="Schiță cu 3 direcții diferite pentru aplicația de pregătire la Evaluarea Națională">
+                  <g filter="url(#pencil-wobble)">
+                    <rect x="52" y="24" width="316" height="68" rx="14" fill="#FEF3C7" stroke="#2D3748" stroke-width="2.2" />
+                    <path d="M 210 92 L 210 132" stroke="#4A5568" stroke-width="2.2" stroke-dasharray="5 4" />
+                    <path d="M 210 132 L 75 182" stroke="#2B6CB0" stroke-width="2.4" marker-end="url(#arrow-alt1)" />
+                    <path d="M 210 132 L 210 182" stroke="#C05621" stroke-width="2.4" marker-end="url(#arrow-alt2)" />
+                    <path d="M 210 132 L 345 182" stroke="#2F855A" stroke-width="2.4" marker-end="url(#arrow-alt3)" />
+                  </g>
+                  <text x="210" y="54" text-anchor="middle" font-size="15.5" font-weight="800" fill="#263036">Evaluarea Națională + Dislexie</text>
+                  <text x="210" y="76" text-anchor="middle" font-size="14" class="hand-label" fill="#52606B">3 direcții complet diferite</text>
+
+                  <!-- Ideea 1 -->
+                  <g filter="url(#pencil-wobble)">
+                    <rect x="18" y="192" width="114" height="142" rx="12" fill="#E8F2FC" stroke="#2B6CB0" stroke-width="2.2" />
+                    <rect x="30" y="232" width="90" height="30" rx="6" fill="#FFFFFF" stroke="#2B6CB0" stroke-width="1.6" />
+                    <rect x="30" y="270" width="90" height="30" rx="6" fill="#FFFFFF" stroke="#2B6CB0" stroke-width="1.6" />
+                  </g>
+                  <text x="75" y="216" text-anchor="middle" font-size="14" font-weight="800" fill="#2B6CB0">Ideea 1</text>
+                  <text x="75" y="252" text-anchor="middle" font-size="12" font-weight="700" fill="#263036">Caiet &amp; Test</text>
+                  <text x="75" y="290" text-anchor="middle" font-size="12" font-weight="700" fill="#263036">Simulare EN</text>
+                  <text x="75" y="322" text-anchor="middle" font-size="13" class="hand-label" fill="#2B6CB0">Pe laptop</text>
+
+                  <!-- Ideea 2 -->
+                  <g filter="url(#pencil-wobble)">
+                    <rect x="153" y="192" width="114" height="142" rx="12" fill="#FFF1E6" stroke="#C05621" stroke-width="2.2" />
+                    <circle cx="210" cy="256" r="24" fill="#FFFFFF" stroke="#C05621" stroke-width="2" />
+                    <path d="M 178 294 Q 194 284 210 294 T 242 294" fill="none" stroke="#C05621" stroke-width="2.2" />
+                  </g>
+                  <text x="210" y="216" text-anchor="middle" font-size="14" font-weight="800" fill="#C05621">Ideea 2</text>
+                  <text x="210" y="262" text-anchor="middle" font-size="19" fill="#C05621">🎙</text>
+                  <text x="210" y="322" text-anchor="middle" font-size="13" class="hand-label" fill="#C05621">Prin voce</text>
+
+                  <!-- Ideea 3 -->
+                  <g filter="url(#pencil-wobble)">
+                    <rect x="288" y="192" width="114" height="142" rx="12" fill="#E9F9EF" stroke="#2F855A" stroke-width="2.2" />
+                    <path d="M 308 284 Q 345 236 382 270" fill="none" stroke="#2F855A" stroke-width="2.2" stroke-dasharray="5 4" />
+                    <circle cx="314" cy="280" r="8" fill="#FFFFFF" stroke="#2F855A" stroke-width="1.8" />
+                    <circle cx="376" cy="266" r="10" fill="#FEF3C7" stroke="#2F855A" stroke-width="1.8" />
+                  </g>
+                  <text x="345" y="216" text-anchor="middle" font-size="14" font-weight="800" fill="#2F855A">Ideea 3</text>
+                  <text x="345" y="244" text-anchor="middle" font-size="12" font-weight="700" fill="#263036">Joc &amp; Cameră</text>
+                  <text x="345" y="322" text-anchor="middle" font-size="13" class="hand-label" fill="#2F855A">Pe caiet</text>
+
+                  <g filter="url(#pencil-wobble)">
+                    <rect x="38" y="366" width="344" height="54" rx="10" fill="#FAF6EE" stroke="#8B6F47" stroke-width="1.8" stroke-dasharray="6 4" />
+                  </g>
+                  <text x="210" y="389" text-anchor="middle" font-size="14" font-weight="700" fill="#263036">Schițe pe hârtie — nimic nu e bătut în cuie</text>
+                  <text x="210" y="409" text-anchor="middle" font-size="14" class="hand-label" fill="#52606B">Părerea dumneavoastră decide direcția</text>
+                </svg>
+              </div>
+            </div>
+          </div>
+          <div class="slide-footer">
+            <span>Hát-Hét Dislexia • Sesiune de feedback cu clientul</span>
+            <span>Apăsați <strong>N</strong> pentru note • <strong>E</strong> pentru notițe live</span>
+          </div>
+          <aside class="speaker-notes">
+            <p><strong>Ce să spui clientului (0:30):</strong></p>
+            <ul>
+              <li>Bună ziua și vă mulțumim mult pentru timpul acordat!</li>
+              <li>Lucrăm la o aplicație pentru elevii de clasa a VIII-a cu dislexie care se pregătesc la Limba Română pentru Evaluarea Națională.</li>
+              <li>Înainte să scriem cod, am desenat <strong>trei idei complet diferite</strong> pe hârtie, tocmai ca să vedem cu dumneavoastră ce se potrivește în practică și ce ar trebui schimbat.</li>
+            </ul>
+          </aside>
+        </section>
+
+        <!-- ==================== SLIDE 2 ==================== -->
+        <section class="slide" data-slide="2" data-title="De ce vă arătăm 3 schițe diferite" data-duration="45">
+          <div class="slide-header">
+            <div class="slide-title-group">
+              <span class="eyebrow">1. Scopul discuției</span>
+              <h1 class="slide-h1">De ce vă arătăm 3 schițe diferite astăzi</h1>
+            </div>
+            <span class="slide-num-pill">Slide 2 / 9</span>
+          </div>
+          <div class="slide-body">
+            <div class="grid-3">
+              <div class="card">
+                <div class="card-title">🎯 Ce problemă vrem să rezolvăm</div>
+                <p>Sprijinim elevii de <strong>clasa a VIII-a (13–14 ani)</strong> cu dislexie la Evaluarea Națională la Limba Română.</p>
+                <p>Vrem să reducem oboseala la citirea textelor lungi, blocajul de la compunere (Subiectul II) și stresul de timp — respectând adaptările legale: <strong>+60 de minute</strong> și citirea cerințelor, fără indicii la examen.</p>
+              </div>
+
+              <div class="card">
+                <div class="card-title">✏️ De ce pe hârtie, nu aplicația gata</div>
+                <p>Înainte să construim varianta finală, am pus pe hârtie <strong>3 moduri complet diferite</strong> de lucru.</p>
+                <p>Acum putem modifica, tăia sau schimba orice detaliu în câteva minute, înainte să investim timp în programare.</p>
+              </div>
+
+              <div class="card" style="background:#FFF9EE; border-color:#E6D4B2;">
+                <div class="card-title">💬 Nu există un răspuns „corect”</div>
+                <p>Nu avem o variantă preferată dinainte și nu căutăm laude.</p>
+                <p>Cel mai mult ne ajută să ne spuneți sincer ce ar funcționa, ce ar obosi sau ar încurca un elev. Putem combina părțile bune din mai multe idei.</p>
+              </div>
+            </div>
+          </div>
+          <div class="slide-footer">
+            <span>Hát-Hét Dislexia • Cum lucrăm astăzi împreună</span>
+            <span>Țintă: 0:45 • Total până aici: 1:15</span>
+          </div>
+          <aside class="speaker-notes">
+            <p><strong>Ce să spui clientului (0:45):</strong></p>
+            <ul>
+              <li>Elevul cu dislexie înțelege materia când i se explică, dar se lovește de trei obstacole: textul lung și înghesuit, blocajul la compunerea de la Subiectul II și frica de timp.</li>
+              <li>La examen are dreptul legal la +60 de minute și la citirea cerințelor, dar fără indicii.</li>
+              <li>Vă arătăm trei schițe pe hârtie ca să ne spuneți fără rețineri ce e util și ce ar încurca în realitate — putem combina orice elemente bune între ele.</li>
+            </ul>
+          </aside>
+        </section>
+
+        <!-- ==================== SLIDE 3 ==================== -->
+        <section class="slide" data-slide="3" data-title="Trei direcții diferite pe scurt" data-duration="40">
+          <div class="slide-header">
+            <div class="slide-title-group">
+              <span class="eyebrow">2. Cele 3 direcții</span>
+              <h1 class="slide-h1">Trei feluri diferite în care ar putea funcționa aplicația</h1>
+            </div>
+            <span class="slide-num-pill">Slide 3 / 9</span>
+          </div>
+          <div class="slide-body">
+            <div class="grid-3">
+              <div class="card alt1">
+                <span class="eyebrow alt1">Ideea 1</span>
+                <div class="card-title">📘 Caietul simplu &amp; Testul</div>
+                <ul class="clean-list alt1">
+                  <li><strong>Dispozitiv:</strong> Laptop sau tabletă, acasă la birou.</li>
+                  <li><strong>Învățare:</strong> Lecții scurte pe pași, desene cu legături, riglă de citire și voce de ajutor.</li>
+                  <li><strong>Examen:</strong> Simulare exact ca la Evaluarea Națională (+60 min, fără indicii).</li>
+                </ul>
+              </div>
+
+              <div class="card alt2">
+                <span class="eyebrow alt2">Ideea 2</span>
+                <div class="card-title">🎙️ Profesorul din căști</div>
+                <ul class="clean-list alt2">
+                  <li><strong>Dispozitiv:</strong> Telefon și căști, oriunde.</li>
+                  <li><strong>Învățare:</strong> Aproape fără text pe ecran — elevul ascultă și răspunde vorbind.</li>
+                  <li><strong>Compunere:</strong> Își povestește ideile cu voce tare, iar aplicația i le așază pe pași.</li>
+                </ul>
+              </div>
+
+              <div class="card alt3">
+                <span class="eyebrow alt3">Ideea 3</span>
+                <div class="card-title">🧭 Harta cu jocuri &amp; Camera</div>
+                <ul class="clean-list alt3">
+                  <li><strong>Dispozitiv:</strong> Tabletă sau telefon, lângă caiet.</li>
+                  <li><strong>Învățare:</strong> Hartă cu etape (fără clasament), jocuri scurte pe culori și benzi desenate.</li>
+                  <li><strong>Pe hârtie:</strong> Camera citește cu voce tare foile tipărite de la școală.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="slide-footer">
+            <span>Hát-Hét Dislexia • Privire de ansamblu</span>
+            <span>Țintă: 0:40 • Total până aici: 1:55</span>
+          </div>
+          <aside class="speaker-notes">
+            <p><strong>Ce să spui clientului (0:40):</strong></p>
+            <ul>
+              <li>Pe scurt, avem trei drumuri diferite:</li>
+              <li><strong>Ideea 1</strong> seamănă cu un caiet curat pe laptop, cu lecții pe bucăți scurte și simulare de examen.</li>
+              <li><strong>Ideea 2</strong> este pe telefon, prin căști și voce — aproape fără citit pe ecran.</li>
+              <li><strong>Ideea 3</strong> este o hartă cu jocuri scurte și o cameră care citește foile de la școală.</li>
+              <li>Le luăm acum pe rând, cu câte o schiță pentru fiecare, și vă invităm să ne spuneți ce vi se pare potrivit sau nepotrivit.</li>
+            </ul>
+          </aside>
+        </section>
+
+        <!-- ==================== SLIDE 4 ==================== -->
+        <section class="slide" data-slide="4" data-title="Ideea 1: Caietul simplu &amp; Testul" data-duration="75">
+          <div class="slide-header">
+            <div class="slide-title-group">
+              <span class="eyebrow alt1">Ideea 1 din 3 • Laptop sau tabletă</span>
+              <h1 class="slide-h1">Ideea 1: „Caietul simplu &amp; Testul de examen”</h1>
+              <p class="slide-subtitle">Două părți clare: înveți pe pași scurți, apoi dai simulări ca la Evaluarea Națională.</p>
+            </div>
+            <span class="slide-num-pill">Slide 4 / 9</span>
+          </div>
+          <div class="slide-body">
+            <div class="sketch-sheet">
+              <svg class="sketch-svg" viewBox="0 0 1160 390" role="img" aria-label="Trei ecrane desenate pe hârtie pentru Ideea 1">
+                <!-- Ecran 1: Acasa -->
+                <g filter="url(#pencil-wobble)">
+                  <rect x="20" y="34" width="335" height="314" rx="12" fill="#FFFFFF" stroke="#2D3748" stroke-width="2.2" />
+                  <rect x="34" y="48" width="307" height="34" rx="7" fill="#FAF6EE" stroke="#718096" stroke-width="1.6" />
+                  <rect x="44" y="54" width="60" height="22" rx="4" fill="#E2E8F0" stroke="#4A5568" stroke-width="1.2" />
+                  <circle cx="126" cy="65" r="8" fill="#FAF6EE" stroke="#4A5568" stroke-width="1.2" />
+                  <circle cx="146" cy="65" r="8" fill="#E9F9EF" stroke="#4A5568" stroke-width="1.2" />
+                  <rect x="172" y="54" width="76" height="22" rx="4" fill="#FEF3C7" stroke="#4A5568" stroke-width="1.2" />
+                  <rect x="260" y="54" width="68" height="22" rx="4" fill="#E8F2FC" stroke="#2B6CB0" stroke-width="1.2" />
+
+                  <rect x="36" y="102" width="144" height="210" rx="10" fill="#E8F2FC" stroke="#2B6CB0" stroke-width="2" />
+                  <rect x="50" y="264" width="116" height="34" rx="7" fill="#2B6CB0" />
+
+                  <rect x="195" y="102" width="144" height="210" rx="10" fill="#E9F9EF" stroke="#2F855A" stroke-width="2" />
+                  <rect x="209" y="264" width="116" height="34" rx="7" fill="#2F855A" />
+
+                  <path d="M 358 188 Q 388 168 408 188" fill="none" stroke="#2B6CB0" stroke-width="2.4" marker-end="url(#arrow-alt1)" />
+                </g>
+                <text x="187" y="22" text-anchor="middle" font-size="14.5" font-weight="800" fill="#2B6CB0">1. Ecranul de pornire</text>
+                <text x="74" y="69" text-anchor="middle" font-size="11.5" font-weight="700" fill="#263036">Litere</text>
+                <text x="210" y="69" text-anchor="middle" font-size="11.5" font-weight="700" fill="#263036">Riglă ▬</text>
+                <text x="294" y="69" text-anchor="middle" font-size="11.5" font-weight="700" fill="#2B6CB0">Voce 🔊</text>
+                <text x="108" y="136" text-anchor="middle" font-size="14" font-weight="800" fill="#2B6CB0">ÎNVĂȚARE</text>
+                <text x="108" y="164" text-anchor="middle" font-size="12.5" fill="#4A5568">Lecții scurte</text>
+                <text x="108" y="186" text-anchor="middle" font-size="12.5" fill="#4A5568">Desene simple</text>
+                <text x="108" y="208" text-anchor="middle" font-size="12.5" fill="#4A5568">Ajutor cu întrebări</text>
+                <text x="108" y="285" text-anchor="middle" font-size="12.5" font-weight="700" fill="#FFFFFF">Încep →</text>
+                <text x="267" y="136" text-anchor="middle" font-size="14" font-weight="800" fill="#2F855A">EXAMEN</text>
+                <text x="267" y="164" text-anchor="middle" font-size="12.5" fill="#4A5568">Simulare EN</text>
+                <text x="267" y="186" text-anchor="middle" font-size="12.5" fill="#4A5568">+60 min în plus</text>
+                <text x="267" y="208" text-anchor="middle" font-size="12.5" fill="#4A5568">Fără indicii</text>
+                <text x="267" y="285" text-anchor="middle" font-size="12.5" font-weight="700" fill="#FFFFFF">Încep test →</text>
+                <text x="187" y="372" text-anchor="middle" font-size="15" class="hand-label" fill="#52606B">Își alege culorile și literele confortabile</text>
+
+                <!-- Ecran 2: Lectie scurta -->
+                <g filter="url(#pencil-wobble)">
+                  <rect x="414" y="34" width="335" height="314" rx="12" fill="#FFFFFF" stroke="#2D3748" stroke-width="2.2" />
+                  <rect x="428" y="48" width="212" height="140" rx="8" fill="#FAF6EE" stroke="#718096" stroke-width="1.6" />
+                  <rect x="434" y="100" width="200" height="24" rx="4" fill="#FEF08A" opacity="0.7" />
+                  <line x1="436" y1="124" x2="632" y2="124" stroke="#D97706" stroke-width="1.8" stroke-dasharray="5 3" />
+                  <rect x="436" y="150" width="194" height="26" rx="13" fill="#E8F2FC" stroke="#2B6CB0" stroke-width="1.4" />
+
+                  <rect x="428" y="198" width="212" height="136" rx="8" fill="#F8FAFC" stroke="#718096" stroke-width="1.5" />
+                  <circle cx="534" cy="232" r="20" fill="#FEF3C7" stroke="#2D3748" stroke-width="1.6" />
+                  <circle cx="468" cy="298" r="18" fill="#BAE6FD" stroke="#2D3748" stroke-width="1.5" />
+                  <circle cx="534" cy="298" r="18" fill="#BBF7D0" stroke="#2D3748" stroke-width="1.5" />
+                  <circle cx="600" cy="298" r="18" fill="#FED7AA" stroke="#2D3748" stroke-width="1.5" />
+                  <line x1="518" y1="248" x2="478" y2="282" stroke="#4A5568" stroke-width="1.5" />
+                  <line x1="534" y1="252" x2="534" y2="280" stroke="#4A5568" stroke-width="1.5" />
+                  <line x1="550" y1="248" x2="590" y2="282" stroke="#4A5568" stroke-width="1.5" />
+
+                  <rect x="650" y="48" width="85" height="286" rx="8" fill="#FFFBEB" stroke="#D97706" stroke-width="1.6" />
+                  <path d="M 753 188 Q 783 168 803 188" fill="none" stroke="#2B6CB0" stroke-width="2.4" marker-end="url(#arrow-alt1)" />
+                </g>
+                <text x="581" y="22" text-anchor="middle" font-size="14.5" font-weight="800" fill="#2B6CB0">2. O lecție pe pași scurți</text>
+                <text x="534" y="70" text-anchor="middle" font-size="13" font-weight="800" fill="#263036">Pasul 2: Cazul Genitiv</text>
+                <text x="442" y="92" font-size="12" fill="#4A5568">Întrebarea care te ajută:</text>
+                <text x="442" y="116" font-size="12.5" font-weight="700" fill="#263036">„Al cui? A cui?” (rigla activă)</text>
+                <text x="533" y="167" text-anchor="middle" font-size="12" font-weight="700" fill="#2B6CB0">▶ Ascultă cu voce tare</text>
+                <text x="534" y="236" text-anchor="middle" font-size="10.5" font-weight="800" fill="#263036">CAZURI</text>
+                <text x="468" y="302" text-anchor="middle" font-size="11.5" font-weight="700" fill="#263036">N</text>
+                <text x="534" y="302" text-anchor="middle" font-size="11.5" font-weight="700" fill="#263036">Ac</text>
+                <text x="600" y="302" text-anchor="middle" font-size="11.5" font-weight="700" fill="#263036">G / D</text>
+                <text x="692" y="76" text-anchor="middle" font-size="12.5" font-weight="800" fill="#92400E">Ajutor</text>
+                <text x="692" y="102" text-anchor="middle" font-size="11.5" class="hand-label" fill="#92400E">Îți pune</text>
+                <text x="692" y="120" text-anchor="middle" font-size="11.5" class="hand-label" fill="#92400E">întrebări</text>
+                <text x="692" y="138" text-anchor="middle" font-size="11.5" class="hand-label" fill="#92400E">fără să</text>
+                <text x="692" y="156" text-anchor="middle" font-size="11.5" class="hand-label" fill="#92400E">îți spună</text>
+                <text x="692" y="174" text-anchor="middle" font-size="11.5" class="hand-label" fill="#92400E">răspunsul</text>
+                <text x="581" y="372" text-anchor="middle" font-size="15" class="hand-label" fill="#52606B">Un singur lucru pe ecran, fără aglomerație</text>
+
+                <!-- Ecran 3: Test si ce ai gresit -->
+                <g filter="url(#pencil-wobble)">
+                  <rect x="808" y="34" width="332" height="314" rx="12" fill="#FFFFFF" stroke="#2D3748" stroke-width="2.2" />
+                  <rect x="822" y="48" width="304" height="34" rx="7" fill="#ECFDF5" stroke="#2F855A" stroke-width="1.6" />
+                  <rect x="822" y="92" width="304" height="100" rx="8" fill="#FAF6EE" stroke="#718096" stroke-width="1.5" />
+                  <rect x="822" y="204" width="304" height="130" rx="8" fill="#FEF2F2" stroke="#DC2626" stroke-width="1.6" stroke-dasharray="5 3" />
+                  <rect x="840" y="288" width="268" height="32" rx="7" fill="#2B6CB0" />
+                </g>
+                <text x="974" y="22" text-anchor="middle" font-size="14.5" font-weight="800" fill="#2B6CB0">3. Testul &amp; ce ai greșit</text>
+                <text x="896" y="69" text-anchor="middle" font-size="12" font-weight="800" fill="#2F855A">⏱ 172:40 (+60m)</text>
+                <text x="1065" y="69" text-anchor="middle" font-size="11.5" font-weight="700" fill="#4A5568">🔒 Fără indicii</text>
+                <text x="836" y="114" font-size="12.5" font-weight="800" fill="#263036">Subiectul I — Întrebarea 3</text>
+                <text x="836" y="138" font-size="12" fill="#4A5568">🔊 [Citește cerința]</text>
+                <text x="836" y="162" font-size="12" fill="#4A5568">○ A      ● B      ○ C</text>
+
+                <text x="836" y="228" font-size="13.5" font-weight="800" fill="#991B1B">Rezultat după test: 78 / 100</text>
+                <text x="836" y="250" font-size="12" fill="#4A5568">• Ai încurcat Genitiv cu Dativ</text>
+                <text x="836" y="270" font-size="12" fill="#4A5568">• Explicație simplă pe înțelesul tău</text>
+                <text x="974" y="308" text-anchor="middle" font-size="12.5" font-weight="700" fill="#FFFFFF">→ Repetă lecția: Cazurile</text>
+                <text x="974" y="372" text-anchor="middle" font-size="15" class="hand-label" fill="#52606B">Îți arată exact unde să te întorci</text>
+              </svg>
+            </div>
+
+            <div class="pro-con-grid">
+              <div class="sticky-note idea1">
+                <div class="sticky-title">💡 Ce încearcă să rezolve</div>
+                Pregătește elevul în condiții reale de examen (+60 min, fără indicii), oferindu-i la învățare culori calde, riglă de citire și explicații pe pași scurți.
+              </div>
+              <div class="sticky-note question">
+                <div class="sticky-title">❓ Ce am vrea să vă întrebăm</div>
+                Ar părea prea „serioasă” sau obositoare după școală? Cât de utilă ar fi simularea cronometrată cu revenire directă la lecția greșită?
+              </div>
+            </div>
+          </div>
+          <div class="slide-footer">
+            <span>Ideea 1 • Laptop sau tabletă</span>
+            <span>Țintă: 1:15 • Total până aici: 3:10</span>
+          </div>
+          <aside class="speaker-notes">
+            <p><strong>Ce să spui clientului (1:15):</strong></p>
+            <ul>
+              <li>În prima idee, elevul are două zone mari: <strong>Învățare</strong> și <strong>Examen</strong>.</li>
+              <li>Sus își reglează fontul, culorile pastel, rigla galbenă de citire și vocea. La lecție vede doar un concept scurt, cu schemă vizuală și un ajutor în dreapta care îl ghidează prin întrebări.</li>
+              <li>La examen simulează Evaluarea Națională cu cele 60 de minute în plus permise de lege, iar la final primește explicații și un buton direct către lecția de repetat.</li>
+              <li><strong>Întrebați clientul:</strong> Vi se pare prea „școlară” după ore sau exact structura de care are nevoie?</li>
+            </ul>
+          </aside>
+        </section>
+
+        <!-- ==================== SLIDE 5 ==================== -->
+        <section class="slide" data-slide="5" data-title="Ideea 2: Profesorul din căști" data-duration="75">
+          <div class="slide-header">
+            <div class="slide-title-group">
+              <span class="eyebrow alt2">Ideea 2 din 3 • Telefon și căști</span>
+              <h1 class="slide-h1">Ideea 2: „Profesorul din căști”</h1>
+              <p class="slide-subtitle">Aproape fără text pe ecran: elevul ascultă și răspunde sau își povestește compunerea cu voce tare.</p>
+            </div>
+            <span class="slide-num-pill">Slide 5 / 9</span>
+          </div>
+          <div class="slide-body">
+            <div class="sketch-sheet">
+              <svg class="sketch-svg" viewBox="0 0 1160 390" role="img" aria-label="Trei ecrane de telefon desenate pe hârtie pentru Ideea 2">
+                <!-- Telefon 1: Discutie prin voce -->
+                <g filter="url(#pencil-wobble)">
+                  <rect x="80" y="34" width="215" height="316" rx="26" fill="#FFFFFF" stroke="#2D3748" stroke-width="2.4" />
+                  <rect x="158" y="44" width="58" height="7" rx="3.5" fill="#CBD5E0" />
+                  <path d="M 110 92 Q 130 70 150 92 T 190 92 T 230 92 T 266 92" fill="none" stroke="#C05621" stroke-width="2.4" />
+                  <rect x="100" y="118" width="175" height="72" rx="12" fill="#FFF1E6" stroke="#C05621" stroke-width="1.8" />
+                  <rect x="118" y="204" width="140" height="28" rx="6" fill="#FEF3C7" stroke="#D97706" stroke-width="1.3" />
+                  <circle cx="187" cy="286" r="32" fill="#C05621" stroke="#7B341E" stroke-width="2" />
+                  <path d="M 312 188 Q 355 166 392 188" fill="none" stroke="#C05621" stroke-width="2.4" marker-end="url(#arrow-alt2)" />
+                </g>
+                <text x="187" y="22" text-anchor="middle" font-size="14.5" font-weight="800" fill="#C05621">1. Discuție prin voce</text>
+                <text x="187" y="144" text-anchor="middle" font-size="13" font-weight="700" fill="#263036">„În: I-am dat bunicii,</text>
+                <text x="187" y="164" text-anchor="middle" font-size="13" font-weight="700" fill="#263036">ce întrebare pui?”</text>
+                <text x="187" y="223" text-anchor="middle" font-size="13.5" font-weight="800" fill="#92400E">Cui? • Dativ</text>
+                <text x="187" y="294" text-anchor="middle" font-size="22" fill="#FFFFFF">🎤</text>
+                <text x="187" y="336" text-anchor="middle" font-size="12" font-weight="700" fill="#4A5568">APASĂ ȘI VORBEȘTE</text>
+                <text x="187" y="372" text-anchor="middle" font-size="15" class="hand-label" fill="#52606B">Fără text lung — doar 2-3 cuvinte</text>
+
+                <!-- Telefon 2: Compunere povestita -->
+                <g filter="url(#pencil-wobble)">
+                  <rect x="472" y="34" width="215" height="316" rx="26" fill="#FFFFFF" stroke="#2D3748" stroke-width="2.4" />
+                  <rect x="550" y="44" width="58" height="7" rx="3.5" fill="#CBD5E0" />
+                  <rect x="490" y="84" width="179" height="56" rx="10" fill="#ECFDF5" stroke="#2F855A" stroke-width="1.6" />
+                  <rect x="490" y="150" width="179" height="68" rx="10" fill="#FFF1E6" stroke="#C05621" stroke-width="2" />
+                  <rect x="490" y="228" width="179" height="50" rx="10" fill="#F8FAFC" stroke="#94A3B8" stroke-width="1.5" stroke-dasharray="4 3" />
+                  <rect x="492" y="294" width="84" height="34" rx="8" fill="#E8F2FC" stroke="#2B6CB0" stroke-width="1.5" />
+                  <rect x="584" y="294" width="84" height="34" rx="8" fill="#C05621" />
+                  <path d="M 704 188 Q 748 166 784 188" fill="none" stroke="#C05621" stroke-width="2.4" marker-end="url(#arrow-alt2)" />
+                </g>
+                <text x="580" y="22" text-anchor="middle" font-size="14.5" font-weight="800" fill="#C05621">2. Compunere povestită (Sub. II)</text>
+                <text x="580" y="70" text-anchor="middle" font-size="12.5" font-weight="800" fill="#263036">Povestești în 3 pași</text>
+                <text x="502" y="106" font-size="12.5" font-weight="700" fill="#2F855A">1. Cum începe? ✓</text>
+                <text x="502" y="126" font-size="11.5" fill="#4A5568">„Într-o dimineață...” </text>
+                <text x="502" y="172" font-size="12.5" font-weight="700" fill="#C05621">2. Ce se întâmplă? 🎤</text>
+                <text x="502" y="192" font-size="11.5" fill="#4A5568">„Spune ce s-a petrecut</text>
+                <text x="502" y="208" font-size="11.5" fill="#4A5568">mai departe...”</text>
+                <text x="502" y="256" font-size="12.5" font-weight="700" fill="#64748B">3. Cum se termină? ○</text>
+                <text x="534" y="315" text-anchor="middle" font-size="11.5" font-weight="700" fill="#2B6CB0">🔊 Ascultă</text>
+                <text x="626" y="315" text-anchor="middle" font-size="11.5" font-weight="700" fill="#FFFFFF">Vezi plan</text>
+                <text x="580" y="372" text-anchor="middle" font-size="15" class="hand-label" fill="#52606B">Îți așază ideile fără teama de foaia albă</text>
+
+                <!-- Telefon 3: Lectie audio 3 min -->
+                <g filter="url(#pencil-wobble)">
+                  <rect x="864" y="34" width="215" height="316" rx="26" fill="#FFFFFF" stroke="#2D3748" stroke-width="2.4" />
+                  <rect x="942" y="44" width="58" height="7" rx="3.5" fill="#CBD5E0" />
+                  <rect x="882" y="84" width="179" height="80" rx="10" fill="#FAF6EE" stroke="#718096" stroke-width="1.6" />
+                  <rect x="898" y="134" width="147" height="10" rx="5" fill="#E2E8F0" />
+                  <rect x="898" y="134" width="88" height="10" rx="5" fill="#C05621" />
+                  <rect x="882" y="176" width="179" height="54" rx="10" fill="#FEF3C7" stroke="#D97706" stroke-width="1.5" />
+                  <rect x="882" y="244" width="179" height="40" rx="10" fill="#E8F2FC" stroke="#2B6CB0" stroke-width="1.8" />
+                  <rect x="882" y="294" width="179" height="40" rx="10" fill="#E9F9EF" stroke="#2F855A" stroke-width="1.8" />
+                </g>
+                <text x="971" y="22" text-anchor="middle" font-size="14.5" font-weight="800" fill="#C05621">3. Lecție audio de 3 minute</text>
+                <text x="971" y="70" text-anchor="middle" font-size="12" font-weight="800" fill="#263036">Viteză mai rară (0.85x)</text>
+                <text x="971" y="106" text-anchor="middle" font-size="13.5" font-weight="700" fill="#263036">Diftong sau Hiat?</text>
+                <text x="971" y="124" text-anchor="middle" font-size="11.5" fill="#52606B">▶ 01:42 / 02:50</text>
+                <text x="971" y="198" text-anchor="middle" font-size="12.5" fill="#78350F">Cuvântul: „ca-iet”</text>
+                <text x="971" y="218" text-anchor="middle" font-size="13" font-weight="800" fill="#92400E">„i-e” în aceeași silabă</text>
+                <text x="971" y="269" text-anchor="middle" font-size="14" font-weight="800" fill="#2B6CB0">Este DIFTONG</text>
+                <text x="971" y="319" text-anchor="middle" font-size="14" font-weight="800" fill="#2F855A">Este HIAT</text>
+                <text x="971" y="372" text-anchor="middle" font-size="15" class="hand-label" fill="#52606B">Asculți în căști și alegi din 2 butoane</text>
+              </svg>
+            </div>
+
+            <div class="pro-con-grid">
+              <div class="sticky-note idea2">
+                <div class="sticky-title">💡 Ce încearcă să rezolve</div>
+                Odihnește complet ochii și elimină blocajul în fața foii albe la compunere, lăsând elevul să își spună ideile oral în 3 pași simpli.
+              </div>
+              <div class="sticky-note question">
+                <div class="sticky-title">❓ Ce am vrea să vă întrebăm</div>
+                S-ar simți un copil confortabil să vorbească cu telefonul? Ar lipsi antrenamentul de citire pe text scris necesar la examen?
+              </div>
+            </div>
+          </div>
+          <div class="slide-footer">
+            <span>Ideea 2 • Telefon și căști</span>
+            <span>Țintă: 1:15 • Total până aici: 4:25</span>
+          </div>
+          <aside class="speaker-notes">
+            <p><strong>Ce să spui clientului (1:15):</strong></p>
+            <ul>
+              <li>A doua idee mută totul pe telefon și pe voce, ca o discuție calmă în căști.</li>
+              <li>Elevul ascultă întrebarea, vede doar două-trei cuvinte cheie și răspunde cu microfonul.</li>
+              <li>Pentru compunerea de la Subiectul II, povestește pe rând începutul, mijlocul și finalul, iar aplicația îi organizează planul înainte să scrie.</li>
+              <li><strong>Întrebați clientul:</strong> Cât de mult l-ar debloca povestitul cu voce tare și ce neajunsuri ar avea lipsa textului scris?</li>
+            </ul>
+          </aside>
+        </section>
+
+        <!-- ==================== SLIDE 6 ==================== -->
+        <section class="slide" data-slide="6" data-title="Ideea 3: Harta cu jocuri &amp; Camera pe caiet" data-duration="75">
+          <div class="slide-header">
+            <div class="slide-title-group">
+              <span class="eyebrow alt3">Ideea 3 din 3 • Tabletă sau telefon, lângă caiet</span>
+              <h1 class="slide-h1">Ideea 3: „Harta cu jocuri &amp; Camera pe caiet”</h1>
+              <p class="slide-subtitle">Învățare prin jocuri scurte pe culori (fără clasament), plus o cameră care citește foile tipărite de la școală.</p>
+            </div>
+            <span class="slide-num-pill">Slide 6 / 9</span>
+          </div>
+          <div class="slide-body">
+            <div class="sketch-sheet">
+              <svg class="sketch-svg" viewBox="0 0 1160 390" role="img" aria-label="Trei ecrane desenate pe hârtie pentru Ideea 3">
+                <!-- Ecran 1: Harta cu etape -->
+                <g filter="url(#pencil-wobble)">
+                  <rect x="20" y="34" width="340" height="314" rx="14" fill="#FFFFFF" stroke="#2D3748" stroke-width="2.2" />
+                  <path d="M 65 276 Q 130 212 185 232 T 295 126" fill="none" stroke="#2F855A" stroke-width="3" stroke-dasharray="7 5" />
+                  <circle cx="72" cy="274" r="28" fill="#DCFCE7" stroke="#2F855A" stroke-width="2" />
+                  <circle cx="185" cy="212" r="32" fill="#FEF3C7" stroke="#D97706" stroke-width="2.2" />
+                  <circle cx="295" cy="126" r="28" fill="#F1F5F9" stroke="#64748B" stroke-width="1.8" stroke-dasharray="4 3" />
+                  <rect x="40" y="52" width="150" height="32" rx="8" fill="#E9F9EF" stroke="#2F855A" stroke-width="1.5" />
+                  <path d="M 364 188 Q 390 168 408 188" fill="none" stroke="#2F855A" stroke-width="2.4" marker-end="url(#arrow-alt3)" />
+                </g>
+                <text x="190" y="22" text-anchor="middle" font-size="14.5" font-weight="800" fill="#2F855A">1. Harta cu etape</text>
+                <text x="115" y="73" text-anchor="middle" font-size="12" font-weight="800" fill="#2F855A">⭐ 4 din 12 etape</text>
+                <text x="72" y="278" text-anchor="middle" font-size="11.5" font-weight="800" fill="#2F855A">Silabe ✓</text>
+                <text x="185" y="210" text-anchor="middle" font-size="12" font-weight="800" fill="#92400E">★ Cazuri</text>
+                <text x="185" y="226" text-anchor="middle" font-size="10.5" fill="#92400E">(acum)</text>
+                <text x="295" y="130" text-anchor="middle" font-size="11" font-weight="700" fill="#64748B">🔒 Texte</text>
+                <text x="235" y="318" text-anchor="middle" font-size="13.5" class="hand-label" fill="#2F855A">Fără clasament cu colegii</text>
+                <text x="190" y="372" text-anchor="middle" font-size="15" class="hand-label" fill="#52606B">Fiecare merge în ritmul lui</text>
+
+                <!-- Ecran 2: Joc pe culori -->
+                <g filter="url(#pencil-wobble)">
+                  <rect x="412" y="34" width="336" height="314" rx="14" fill="#FFFFFF" stroke="#2D3748" stroke-width="2.2" />
+                  <rect x="434" y="60" width="90" height="34" rx="8" fill="#FEF3C7" stroke="#D97706" stroke-width="1.8" />
+                  <rect x="536" y="60" width="90" height="34" rx="8" fill="#E8F2FC" stroke="#2B6CB0" stroke-width="1.8" />
+                  <rect x="638" y="60" width="90" height="34" rx="8" fill="#FCE7F3" stroke="#DB2777" stroke-width="1.8" />
+                  <path d="M 479 98 Q 495 140 532 168" fill="none" stroke="#D97706" stroke-width="2" stroke-dasharray="4 3" marker-end="url(#arrow-ink)" />
+                  <rect x="432" y="172" width="142" height="70" rx="10" fill="#E9F9EF" stroke="#2F855A" stroke-width="1.8" />
+                  <rect x="588" y="172" width="142" height="70" rx="10" fill="#FFF1E6" stroke="#C05621" stroke-width="1.8" />
+                  <rect x="432" y="258" width="298" height="74" rx="10" fill="#FAF6EE" stroke="#718096" stroke-width="1.5" />
+                  <line x1="531" y1="258" x2="531" y2="332" stroke="#CBD5E0" stroke-width="1.4" />
+                  <line x1="630" y1="258" x2="630" y2="332" stroke="#CBD5E0" stroke-width="1.4" />
+                  <path d="M 753 188 Q 780 168 802 188" fill="none" stroke="#2F855A" stroke-width="2.4" marker-end="url(#arrow-alt3)" />
+                </g>
+                <text x="580" y="22" text-anchor="middle" font-size="14.5" font-weight="800" fill="#2F855A">2. Joc pe culori &amp; Benzi desenate</text>
+                <text x="479" y="82" text-anchor="middle" font-size="12.5" font-weight="800" fill="#263036">„bunicii”</text>
+                <text x="581" y="82" text-anchor="middle" font-size="12.5" font-weight="800" fill="#263036">„cartea”</text>
+                <text x="683" y="82" text-anchor="middle" font-size="12.5" font-weight="800" fill="#263036">„copile!”</text>
+                <text x="503" y="202" text-anchor="middle" font-size="12.5" font-weight="800" fill="#2F855A">Cutia: DATIV</text>
+                <text x="503" y="224" text-anchor="middle" font-size="11.5" fill="#4A5568">(Cui?)</text>
+                <text x="659" y="202" text-anchor="middle" font-size="12.5" font-weight="800" fill="#C05621">Cutia: VOCATIV</text>
+                <text x="659" y="224" text-anchor="middle" font-size="11.5" fill="#4A5568">(Strigare)</text>
+                <text x="481" y="286" text-anchor="middle" font-size="11.5" font-weight="700" fill="#4A5568">Desen 1</text>
+                <text x="481" y="308" text-anchor="middle" font-size="12" class="hand-label" fill="#52606B">Cine e?</text>
+                <text x="580" y="286" text-anchor="middle" font-size="11.5" font-weight="700" fill="#4A5568">Desen 2</text>
+                <text x="580" y="308" text-anchor="middle" font-size="12" class="hand-label" fill="#52606B">Ce face?</text>
+                <text x="679" y="286" text-anchor="middle" font-size="11.5" font-weight="700" fill="#4A5568">Desen 3</text>
+                <text x="679" y="308" text-anchor="middle" font-size="12" class="hand-label" fill="#52606B">Finalul</text>
+                <text x="580" y="372" text-anchor="middle" font-size="15" class="hand-label" fill="#52606B">Potrivești cuvinte și ordonezi povestea</text>
+
+                <!-- Ecran 3: Camera pe foaia de hartie -->
+                <g filter="url(#pencil-wobble)">
+                  <rect x="815" y="58" width="320" height="276" rx="6" fill="#F8FAFC" stroke="#94A3B8" stroke-width="1.8" transform="rotate(-2 975 196)" />
+                  <line x1="840" y1="94" x2="1090" y2="90" stroke="#CBD5E0" stroke-width="3" />
+                  <line x1="840" y1="116" x2="1060" y2="112" stroke="#CBD5E0" stroke-width="3" />
+                  <line x1="840" y1="295" x2="1075" y2="290" stroke="#CBD5E0" stroke-width="3" />
+                  <rect x="848" y="122" width="256" height="150" rx="16" fill="#FAF6EE" stroke="#2D3748" stroke-width="2.6" />
+                  <rect x="864" y="138" width="224" height="74" rx="8" fill="#FEF9C3" stroke="#2F855A" stroke-width="1.6" stroke-dasharray="4 3" />
+                  <rect x="886" y="226" width="180" height="32" rx="16" fill="#2F855A" />
+                </g>
+                <text x="975" y="22" text-anchor="middle" font-size="14.5" font-weight="800" fill="#2F855A">3. Camera peste foaia reală</text>
+                <text x="975" y="78" text-anchor="middle" font-size="12" class="hand-label" fill="#64748B">Foaia tipărită de pe birou</text>
+                <text x="976" y="160" text-anchor="middle" font-size="12" font-weight="800" fill="#2F855A">Pe ecran apare mai clar:</text>
+                <text x="976" y="190" text-anchor="middle" font-size="16" font-weight="800" fill="#263036"><tspan fill="#2B6CB0">sub</tspan>-<tspan fill="#C05621">stan</tspan>-<tspan fill="#2F855A">ti</tspan>-<tspan fill="#B7791F">vul</tspan></text>
+                <text x="976" y="247" text-anchor="middle" font-size="12.5" font-weight="700" fill="#FFFFFF">🔊 Citește foaia cu voce tare</text>
+                <text x="975" y="372" text-anchor="middle" font-size="15" class="hand-label" fill="#52606B">Îl ajută și la temele de pe hârtie</text>
+              </svg>
+            </div>
+
+            <div class="pro-con-grid">
+              <div class="sticky-note idea3">
+                <div class="sticky-title">💡 Ce încearcă să rezolve</div>
+                Crește motivația la 13–14 ani prin etape vizuale fără presiunea clasamentului și leagă aplicația de fișele tipărite primite la școală.
+              </div>
+              <div class="sticky-note question">
+                <div class="sticky-title">❓ Ce am vrea să vă întrebăm</div>
+                Jocurile și etapele l-ar motiva sau i-ar fura atenția? Cât de des ar folosi un elev camera pentru a citi foi de pe birou?
+              </div>
+            </div>
+          </div>
+          <div class="slide-footer">
+            <span>Ideea 3 • Tabletă sau telefon, lângă caiet</span>
+            <span>Țintă: 1:15 • Total până aici: 5:40</span>
+          </div>
+          <aside class="speaker-notes">
+            <p><strong>Ce să spui clientului (1:15):</strong></p>
+            <ul>
+              <li>A treia idee caută să fie mai jucăușă și să ajute și la fișele pe hârtie de la școală.</li>
+              <li>Elevul are o hartă cu etape în ritmul lui (fără clasamente între colegi), potrivește cuvinte în cutii colorate, ordonează benzi desenate pentru compunere și poate pune camera peste o fișă tipărită ca să i-o despartă în silabe colorate și să i-o citească.</li>
+              <li><strong>Întrebați clientul:</strong> Ar atrage un copil de clasa a VIII-a sau elementele de joc ar fi prea încărcate / copilăroase?</li>
+            </ul>
+          </aside>
+        </section>
+
+        <!-- ==================== SLIDE 7 ==================== -->
+        <section class="slide" data-slide="7" data-title="Pe scurt: cum diferă cele 3 idei" data-duration="45">
+          <div class="slide-header">
+            <div class="slide-title-group">
+              <span class="eyebrow">3. Toate 3 alături</span>
+              <h1 class="slide-h1">Pe scurt: cum diferă cele 3 idei</h1>
+            </div>
+            <span class="slide-num-pill">Slide 7 / 9</span>
+          </div>
+          <div class="slide-body">
+            <table class="compare-table">
+              <thead>
+                <tr>
+                  <th>Aspect</th>
+                  <th class="col-alt1">Ideea 1 — Caiet &amp; Test</th>
+                  <th class="col-alt2">Ideea 2 — Profesorul din căști</th>
+                  <th class="col-alt3">Ideea 3 — Joc &amp; Cameră</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="crit-name">Pe ce dispozitiv?</td>
+                  <td>Laptop sau tabletă, acasă la birou</td>
+                  <td>Telefon și căști, oriunde</td>
+                  <td>Tabletă sau telefon, lângă caiet</td>
+                </tr>
+                <tr>
+                  <td class="crit-name">Cum parcurge lecția?</td>
+                  <td>Pași scurți, riglă de citire, desene cu legături</td>
+                  <td>Ascultă explicații scurte și răspunde prin voce</td>
+                  <td>Hartă cu etape, cutii colorate, benzi desenate</td>
+                </tr>
+                <tr>
+                  <td class="crit-name">Cum ajută la compunere?</td>
+                  <td>Schemă ghidată cu întrebări ajutătoare</td>
+                  <td>Povestește liber cu voce tare în 3 pași</td>
+                  <td>Ordonează 3 desene ale poveștii</td>
+                </tr>
+                <tr>
+                  <td class="crit-name">Legătura cu Evaluarea Națională</td>
+                  <td>Simulare oficială completă (+60 min, fără indicii)</td>
+                  <td>Antrenament oral, fără text pe foaie</td>
+                  <td>Ajutor cu camera pe fișele tipărite de acasă</td>
+                </tr>
+                <tr>
+                  <td class="crit-name">Punctul forte</td>
+                  <td>Pregătire fidelă pentru formatul de examen</td>
+                  <td>Zero oboseală pentru ochi &amp; fără blocaj la scris</td>
+                  <td>Motivație prin joacă &amp; sprijin direct pe hârtie</td>
+                </tr>
+              </tbody>
+            </table>
+
+            <div class="callout-banner">
+              <strong>Important:</strong> Nu trebuie să alegem o singură variantă — putem combina piesele care au cel mai mult sens pentru elevi!
+            </div>
+          </div>
+          <div class="slide-footer">
+            <span>Hát-Hét Dislexia • Comparație neutră</span>
+            <span>Țintă: 0:45 • Total până aici: 6:25</span>
+          </div>
+          <aside class="speaker-notes">
+            <p><strong>Ce să spui clientului (0:45):</strong></p>
+            <ul>
+              <li>Puse una lângă alta, se vede că fiecare idee rezolvă altceva foarte bine.</li>
+              <li>Nu vă cerem să alegeți „doar una”: putem lua structura dintr-o idee, partea de voce din alta și culorile din a treia — sau să eliminăm ce nu ajută.</li>
+              <li>Acum am vrea să trecem la câteva întrebări scurte și să vă ascultăm părerea.</li>
+            </ul>
+          </aside>
+        </section>
+
+        <!-- ==================== SLIDE 8 ==================== -->
+        <section class="slide" data-slide="8" data-title="Întrebări pentru discuție &amp; Pașii următori" data-duration="45">
+          <div class="slide-header">
+            <div class="slide-title-group">
+              <span class="eyebrow">4. Discuție deschisă</span>
+              <h1 class="slide-h1">Întrebări la care ne-ar ajuta părerea dumneavoastră</h1>
+            </div>
+            <span class="slide-num-pill">Slide 8 / 9</span>
+          </div>
+          <div class="slide-body">
+            <div class="grid-2-wide">
+              <div class="question-list">
+                <div class="question-card">
+                  <span class="question-num">1</span>
+                  <div>
+                    <strong>Ce păstrăm neapărat?</strong>
+                    <span>Care dintre funcții (riglă, voce, povestit compunere, simulare, culori) ar ajuta cel mai mult?</span>
+                  </div>
+                </div>
+                <div class="question-card">
+                  <span class="question-num">2</span>
+                  <div>
+                    <strong>Ce ar obosi sau ar distrage elevul?</strong>
+                    <span>Ce elemente vizuale, texte sau cerințe ar trebui evitate din start?</span>
+                  </div>
+                </div>
+                <div class="question-card">
+                  <span class="question-num">3</span>
+                  <div>
+                    <strong>Unde și pe ce lucrează acasă?</strong>
+                    <span>Folosește mai des laptopul, tableta sau telefonul când se pregătește?</span>
+                  </div>
+                </div>
+                <div class="question-card">
+                  <span class="question-num">4</span>
+                  <div>
+                    <strong>Compunerea (Subiectul II) vs. textul (Subiectul I)</strong>
+                    <span>Unde apar cele mai mari blocaje în practică pentru un elev cu dislexie?</span>
+                  </div>
+                </div>
+                <div class="question-card">
+                  <span class="question-num">5</span>
+                  <div>
+                    <strong>Ce lipsește din toate cele 3 schițe?</strong>
+                    <span>Există o nevoie importantă pe care nu am surprins-o încă?</span>
+                  </div>
+                </div>
+              </div>
+
+              <div style="display:flex; flex-direction:column; gap:16px; justify-content:space-between;">
+                <div class="card">
+                  <div class="card-title">🗓️ Ce facem după discuția de azi</div>
+                  <div class="flow-list">
+                    <div class="flow-step">
+                      <span class="flow-num alt1">1</span>
+                      <div>
+                        <strong>Combinăm ideile potrivite</strong>
+                        <span>Punem într-o singură schiță clară ce a primit cele mai bune reacții.</span>
+                      </div>
+                    </div>
+                    <div class="flow-step">
+                      <span class="flow-num alt2">2</span>
+                      <div>
+                        <strong>Construim prima variantă de test</strong>
+                        <span>Un prototip simplu pe care se poate da click și asculta în română.</span>
+                      </div>
+                    </div>
+                    <div class="flow-step">
+                      <span class="flow-num alt3">3</span>
+                      <div>
+                        <strong>Revenim să testăm împreună</strong>
+                        <span>Verificăm pe viu ce mai trebuie simplificat înainte de varianta finală.</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="card" style="text-align:center; padding: 16px 20px; background: #FFFDF8; border: 2px solid #C8BDA6;">
+                  <h2 style="font-size: 20px; font-weight: 800; color: var(--ink);">Mulțumim pentru timpul și sfaturile dumneavoastră!</h2>
+                  <p style="font-size: 14.5px; color: var(--ink-muted);">Pe slide-ul următor putem nota împreună ideile principale din discuție.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="slide-footer">
+            <span>Hát-Hét Dislexia • Întrebări deschise &amp; pași următori</span>
+            <span>Țintă: 0:45 • Total prezentare: 7:10 (+ discuție)</span>
+          </div>
+          <aside class="speaker-notes">
+            <p><strong>Ce să spui clientului (0:45 + discuție):</strong></p>
+            <ul>
+              <li>Acestea sunt cele cinci întrebări pe care ne-am bucura să le parcurgem împreună.</li>
+              <li>Nu trebuie să le luăm strict în ordine — spuneți-ne liber ce v-a atras atenția sau ce vi se pare greșit la oricare dintre cele trei idei.</li>
+              <li>Când începem să notăm observațiile, putem trece pe <strong>Slide 9</strong> și apăsăm tasta <strong>E</strong> pentru a scrie pe viu.</li>
+            </ul>
+          </aside>
+        </section>
+
+        <!-- ==================== SLIDE 9 ==================== -->
+        <section class="slide" data-slide="9" data-title="Notițele discuției de astăzi (Editabil)" data-duration="30">
+          <div class="slide-header">
+            <div class="slide-title-group">
+              <span class="eyebrow edit">5. Notițe live • Apăsați E pentru completare</span>
+              <h1 class="slide-h1">Ce am notat din discuția de astăzi</h1>
+            </div>
+            <span class="slide-num-pill">Slide 9 / 9</span>
+          </div>
+          <div class="slide-body">
+            <div class="grid-3">
+              <div class="card alt1">
+                <div class="card-title">📘 Ideea 1 — Caiet &amp; Test</div>
+                <div class="feedback-block">
+                  <span class="feedback-label">👍 Ce i-a plăcut clientului:</span>
+                  <div class="client-feedback-input" data-editable="client-fb-alt1-pro">[Notați aici ce a apreciat clientul la Ideea 1...]</div>
+                </div>
+                <div class="feedback-block">
+                  <span class="feedback-label">⚠️ Ce ar schimba / îngrijorări:</span>
+                  <div class="client-feedback-input" data-editable="client-fb-alt1-con">[Notați aici ce ar modifica sau ce risc vede la Ideea 1...]</div>
+                </div>
+              </div>
+
+              <div class="card alt2">
+                <div class="card-title">🎙️ Ideea 2 — Prin voce</div>
+                <div class="feedback-block">
+                  <span class="feedback-label">👍 Ce i-a plăcut clientului:</span>
+                  <div class="client-feedback-input" data-editable="client-fb-alt2-pro">[Notați aici ce a apreciat clientul la Ideea 2...]</div>
+                </div>
+                <div class="feedback-block">
+                  <span class="feedback-label">⚠️ Ce ar schimba / îngrijorări:</span>
+                  <div class="client-feedback-input" data-editable="client-fb-alt2-con">[Notați aici ce ar modifica sau ce risc vede la Ideea 2...]</div>
+                </div>
+              </div>
+
+              <div class="card alt3">
+                <div class="card-title">🧭 Ideea 3 — Joc &amp; Cameră</div>
+                <div class="feedback-block">
+                  <span class="feedback-label">👍 Ce i-a plăcut clientului:</span>
+                  <div class="client-feedback-input" data-editable="client-fb-alt3-pro">[Notați aici ce a apreciat clientul la Ideea 3...]</div>
+                </div>
+                <div class="feedback-block">
+                  <span class="feedback-label">⚠️ Ce ar schimba / îngrijorări:</span>
+                  <div class="client-feedback-input" data-editable="client-fb-alt3-con">[Notați aici ce ar modifica sau ce risc vede la Ideea 3...]</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="client-summary-bar">
+              <span class="feedback-label">🧩 Ce combinăm / ce a rămas prioritar:</span>
+              <div data-editable="client-synthesis">[Ex.: Ce păstrăm, ce eliminăm, pe ce dispozitiv ne concentrăm în prima variantă...]</div>
+            </div>
+          </div>
+          <div class="slide-footer">
+            <span>Hát-Hét Dislexia • Notițele se salvează automat în browser</span>
+            <span>Țintă: 0:30 • Total prezentare: 7:40</span>
+          </div>
+          <aside class="speaker-notes">
+            <p><strong>Pentru facilitator (în timpul / la finalul întâlnirii):</strong></p>
+            <ul>
+              <li>Apăsați <strong>E</strong> (sau butonul <strong>Editează</strong>) și notați pe scurt cuvintele reale ale clientului în cele 6 căsuțe și în banda de jos.</li>
+              <li>Textele se salvează automat separat față de prezentarea pentru profesor (<code>hat_het_client_v1</code>).</li>
+              <li>La final, apăsați <strong>🖨 PDF</strong> pentru a păstra o copie a notițelor, apoi transferați observațiile în <code>index.html</code> (Slide 8).</li>
+            </ul>
+          </aside>
+        </section>
+
+      </div>
+    </main>
+
+    <!-- Collapsible Speaker Notes Drawer -->
+    <section id="notes-drawer" class="notes-drawer" aria-label="Note pentru facilitator">
+      <div class="notes-drawer-header">
+        <span id="notes-drawer-title">Ce să spui</span>
+        <button id="btn-close-notes" class="tb-btn" type="button">✕ Închide (N)</button>
+      </div>
+      <div id="notes-drawer-body" class="notes-drawer-body"></div>
+    </section>
+
+    <!-- Bottom Interactive Presenter Toolbar -->
+    <footer class="toolbar" aria-label="Controale prezentare">
+      <div class="toolbar-group">
+        <button id="btn-prev" class="tb-btn" type="button" title="Slide anterior (←)">← Înapoi</button>
+        <span id="slide-counter" class="tb-counter">1 / 9</span>
+        <button id="btn-next" class="tb-btn" type="button" title="Slide următor (→ / Space)">Înainte →</button>
+        <div class="progress-track" aria-hidden="true">
+          <div id="progress-fill" class="progress-fill"></div>
+        </div>
+      </div>
+
+      <div class="toolbar-group">
+        <span id="timing-cue" class="timing-cue">Țintă: 0:30 • Total până aici: 0:30 / 7:40</span>
+        <button id="btn-timer" class="timer-pill" type="button" title="Click: Start/Pauză (T) • Dublu-click: Reset">⏱ 00:00 / 07:40</button>
+      </div>
+
+      <div class="toolbar-group">
+        <button id="btn-notes" class="tb-btn" type="button" title="Arată/ascunde notele (N)">📝 Note (N)</button>
+        <button id="btn-grid" class="tb-btn" type="button" title="Toate slide-urile (G)">⊞ Cuprins (G)</button>
+        <button id="btn-edit" class="tb-btn" type="button" title="Completează câmpurile editabile (E)">✏️ Editează (E)</button>
+        <button id="btn-reset-edits" class="tb-btn" type="button" title="Resetează textele editate">↺ Reset</button>
+        <button id="btn-fullscreen" class="tb-btn" type="button" title="Pe tot ecranul (F)">⛶ Ecran (F)</button>
+        <button id="btn-print" class="tb-btn" type="button" title="Salvează PDF / Print (Ctrl+P)">🖨 PDF</button>
+      </div>
+    </footer>
+  </div>
+
+  <!-- Slide Overview Grid Modal -->
+  <div id="overview-modal" class="overview-modal" role="dialog" aria-modal="true" aria-label="Cuprins slide-uri">
+    <div class="overview-header">
+      <h2 style="font-size:20px; font-weight:800;">Toate slide-urile — Prezentare Client (7:40 + discuție)</h2>
+      <button id="btn-close-overview" class="tb-btn" type="button">✕ Închide (Esc)</button>
+    </div>
+    <div id="overview-grid" class="overview-grid"></div>
+  </div>
+
+  <script defer src="deck.js"></script>
+</body>
+</html>

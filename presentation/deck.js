@@ -1,8 +1,7 @@
 (function () {
   'use strict';
 
-  var STORAGE_KEY = 'hat_het_ioc_alt_edits_v1';
-  var TOTAL_TARGET_SECONDS = 720; // 12:00 minutes
+  var STORAGE_KEY = (document.body && document.body.getAttribute('data-storage-key')) || 'hat_het_ioc_simple_v2';
 
   var slides = Array.prototype.slice.call(document.querySelectorAll('.slide'));
   var stageViewport = document.querySelector('.stage-viewport');
@@ -36,7 +35,7 @@
   var timerSeconds = 0;
   var timerInterval = null;
 
-  // Precompute cumulative slide timings
+  // Precompute cumulative and total slide durations dynamically
   var cumulativeTimes = [];
   var runningTotal = 0;
   slides.forEach(function (slide) {
@@ -44,6 +43,7 @@
     runningTotal += sec;
     cumulativeTimes.push(runningTotal);
   });
+  var TOTAL_TARGET_SECONDS = runningTotal || 490;
 
   function formatMMSS(totalSec) {
     var mins = Math.floor(totalSec / 60);
@@ -78,11 +78,11 @@
 
     if (notesDrawerTitle) {
       notesDrawerTitle.textContent =
-        'Note vorbitor — Slide ' + (currentIndex + 1) + ': ' + title +
-        ' (' + formatMinSec(dur) + ' • Cumulativ ' + formatMinSec(cum) + ' / 12:00)';
+        'Ce să spui — Slide ' + (currentIndex + 1) + ': ' + title +
+        ' (' + formatMinSec(dur) + ' • Total până aici: ' + formatMinSec(cum) + ' / ' + formatMinSec(TOTAL_TARGET_SECONDS) + ')';
     }
     if (notesDrawerBody) {
-      notesDrawerBody.innerHTML = notesEl ? notesEl.innerHTML : '<p>Fără note pentru acest slide.</p>';
+      notesDrawerBody.innerHTML = notesEl ? notesEl.innerHTML : '<p>Nu sunt note pentru acest slide.</p>';
     }
   }
 
@@ -116,7 +116,7 @@
     var cum = cumulativeTimes[currentIndex] || 0;
     if (timingCue) {
       timingCue.textContent =
-        'Țintă slide: ' + formatMinSec(dur) + ' • Cumulativ: ' + formatMinSec(cum) + ' / ' + formatMinSec(TOTAL_TARGET_SECONDS);
+        'Țintă: ' + formatMinSec(dur) + ' • Total până aici: ' + formatMinSec(cum) + ' / ' + formatMinSec(TOTAL_TARGET_SECONDS);
     }
 
     if (btnPrev) btnPrev.disabled = currentIndex === 0;
@@ -149,11 +149,12 @@
   // Timer controls
   function renderTimer() {
     if (!btnTimer) return;
-    btnTimer.textContent = '⏱ ' + formatMMSS(timerSeconds) + ' / 12:00';
+    var targetStr = formatMMSS(TOTAL_TARGET_SECONDS);
+    btnTimer.textContent = '⏱ ' + formatMMSS(timerSeconds) + ' / ' + targetStr;
     btnTimer.classList.remove('running', 'warn', 'over');
     if (timerSeconds > TOTAL_TARGET_SECONDS) {
       btnTimer.classList.add('over');
-    } else if (timerSeconds >= 660) {
+    } else if (timerSeconds >= Math.max(0, TOTAL_TARGET_SECONDS - 60)) {
       btnTimer.classList.add('warn');
     } else if (timerInterval !== null) {
       btnTimer.classList.add('running');
@@ -203,7 +204,7 @@
       var card = document.createElement('div');
       card.className = 'ov-card' + (idx === currentIndex ? ' current' : '');
       card.innerHTML =
-        '<div class="ov-top"><span>Slide ' + (idx + 1) + '</span><span>' + formatMinSec(dur) + ' (Σ ' + formatMinSec(cum) + ')</span></div>' +
+        '<div class="ov-top"><span>Slide ' + (idx + 1) + '</span><span>' + formatMinSec(dur) + ' (Total ' + formatMinSec(cum) + ')</span></div>' +
         '<div class="ov-title">' + title + '</div>';
       card.addEventListener('click', function () {
         showSlide(idx);
@@ -276,7 +277,7 @@
   });
 
   function resetEdits() {
-    if (!window.confirm('Resetați toate câmpurile editate la valorile inițiale (șablon)?')) return;
+    if (!window.confirm('Resetați textele editate la valorile inițiale?')) return;
     try {
       localStorage.removeItem(STORAGE_KEY);
     } catch (e) {}
@@ -299,7 +300,6 @@
     }
   }
 
-  // Parse initial hash
   function getInitialSlideIndex() {
     var match = window.location.hash.match(/^#slide-(\d+)$/);
     if (match) {
